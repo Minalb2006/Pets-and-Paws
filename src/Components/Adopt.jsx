@@ -1,4 +1,6 @@
 import React from "react";
+import { RiAccountPinCircleLine } from "react-icons/ri";
+import logo from '../assets/logo2.png';
 
 
 const pets = [
@@ -30,78 +32,27 @@ const pets = [
   { name: "Junnu", weight: "3.5kg", img: "https://i.pinimg.com/736x/44/94/fd/4494fd0258c467b9ec9777ef55fdebc8.jpg" },
 ];
 
-// export default function Adopt() {
-//   return (
-//     <>
-//     <div className="bg-[#F5C977] min-h-screen font-sans">
-
-//       <header className="flex justify-between items-center px-10 py-4 bg-[#E9B75F]">
-//         <h1 className="text-2xl font-bold">🐾 paws and pet</h1>
-//         <nav className="space-x-6 font-semibold">
-//           <a href="#">Adopt</a>
-//           <a href="#">Donate</a>
-//           {/* <a href="#">Shop</a> */}
-//           <a href="#">About Us</a>
-//           <a href="#">Feedback</a>
-//         </nav>
-//       </header>
-
-//       <h2 className="text-center text-2xl font-bold mb-6">
-//         Meet Your New Best Friend!
-//       </h2>
-
-
-//       <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 px-10">
-//         {pets.map((pet, index) => (
-//           <div
-//             key={index}
-//             className="bg-[#FCE6B4] p-4 rounded-xl shadow-md text-center"
-//           >
-//             <img
-//               src={pet.img}
-//               alt={pet.name}
-//               className="rounded-lg mb-3"
-
-//             />
-//             <h3 className="font-bold">{pet.name}</h3>
-//             <p className="text-sm text-gray-700">{pet.weight}</p>
-//             <button className="mt-3 bg-[#B86B2E] text-white px-4 py-1 rounded hover:bg-[#9c5622]">
-//               Adopt Me
-//             </button>
-//           </div>
-//         ))}
-//       </section>
-// import React from "react";
-
-// const pets = [
-//   { name: "Bunboy", weight: "3kg", img: "https://i.pinimg.com/736x/9f/77/69/9f776960b5fe247c5cd748caaf53ccd8.jpg" },
-//   { name: "Happy Eater", weight: "5kg", img: "https://i.pinimg.com/1200x/d8/87/29/d88729223ad513c2355fb3d9e285280e.jpg" },
-//   { name: "Crafty Finest", weight: "7kg", img: "https://placedog.net/300/300?id=3" },
-//   { name: "Smokey Caten", weight: "9kg", img: "https://placedog.net/300/300?id=4" },
-//   { name: "Snowy", weight: "4kg", img: "https://i.pinimg.com/1200x/04/5a/16/045a16871a4d8ffb1d3b6fd0a451620c.jpg" },
-//   { name: "Buddy", weight: "6kg", img: "https://placedog.net/300/300?id=6" },
-//   { name: "Rocky", weight: "8kg", img: "https://placedog.net/300/300?id=7" },
-//   { name: "Coco", weight: "5kg", img: "https://placedog.net/300/300?id=8" },
-// ];
-
 export default function Adopt() {
   return (
     <>
     <div className="bg-[#F5C977] min-h-screen font-sans">
 
-      
-      <header className="flex justify-between items-center px-10 py-4 bg-[#E9B75F]">
-        <h1 className="text-2xl font-bold">🐾 paws and pet</h1>
-        <nav className="space-x-6 font-semibold">
-          <a href="#">Adopt</a>
-          <a href="#">Donate</a>
-          <a href="#">Shop</a>
-          <a href="#">About Us</a>
-          <a href="#">Feedback</a>
-        </nav>
-      </header>
-
     
+      <div className='bg-[#e6b565] flex items-center justify-between px-8 py-4'>
+         <div className='flex items-center gap-3'> 
+          <img src={logo} alt='logo' className='w-15 h-15' />
+          <span className='font-bold text-lg'>paws & pet</span>
+        </div>
+
+        <ul className='flex gap-6 font-medium'>
+          <li className='cursor-pointer'>Adopt</li>
+          <li className='cursor-pointer'>Donate</li>
+           <li className='cursor-pointer'>Shop</li>
+          <li className='cursor-pointer'>About us</li>
+          <li className='cursor-pointer'>Feedback</li>
+          <li className='cursor-pointer'><RiAccountPinCircleLine className="text-4xl"/> </li>
+        </ul>
+      </div>
       <h2 className="text-center text-2xl font-bold my-6">
         Meet Your New Best Friend!
       </h2>
@@ -111,9 +62,7 @@ export default function Adopt() {
         {pets.map((pet, index) => (
           <div
             key={index}
-            className="bg-[#FCE6B4] rounded-xl shadow-md
-                       w-[260px] h-[380px] mx-auto
-                       flex flex-col justify-between p-4"
+            className="bg-[#FCE6B4] rounded-xl shadow-md w-[260px] h-[380px] mx-auto flex flex-col justify-between p-4"
           >
             
             <img
